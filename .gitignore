@@ -13,3 +13,9 @@ venv.bak/
 
 # Checkpoints
 ckpt/
+
+# OS
+.DS_Store
+
+# pegasus
+pegasus.egg-info/
