@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[scripts]
+train = "python ./pegasus/bin/train.py --params=aeslc_transformer --param_overrides=vocab_filename=ckpt/pegasus_ckpt/c4.unigram.newline.10pct.96000.model --train_init_checkpoint=ckpt/pegasus_ckpt/model.ckpt-1500000 --model_dir=ckpt/pegasus_ckpt/aeslc"
+evaluate = "python ./pegasus/bin/evaluate.py --params=aeslc_transformer --param_overrides=vocab_filename=ckpt/pegasus_ckpt/c4.unigram.newline.10pct.96000.model,batch_size=1,beam_size=5,beam_alpha=0.6 --model_dir=ckpt/pegasus_ckpt/aeslc"
+
+[dev-packages]
+
+[packages]
+absl-py = "*"
+mock = "*"
+numpy = "*"
+rouge-score = "*"
+sacrebleu = "*"
+sentencepiece = "*"
+tensorflow-text = "==1.15.0rc0"
+tensor2tensor = "==1.15.0"
+tfds-nightly = "*"
+pegasus = {editable = true, path = "."}
+
+[requires]
+python_version = "3.6"
