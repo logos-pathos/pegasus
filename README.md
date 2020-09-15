@@ -88,6 +88,10 @@ gsutil cp -r gs://pegasus_ckpt/ ckpt/
 
 ```
 
+```
+pipenv install -e . --skip-lock
+```
+
 # Finetuning on downstream datasets
 
 ## on existing dataset
