@@ -19,3 +19,6 @@ ckpt/
 
 # pegasus
 pegasus.egg-info/
+
+# vscode
+.vscode
